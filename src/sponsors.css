@@ -9,10 +9,11 @@
 
 .sponsors-container {
     display: flex;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
 .sponsor-img {
+    will-change: transform; 
     animation: scroll-left 20s linear infinite;
     margin: 0 15px;
     max-height: 80px;
