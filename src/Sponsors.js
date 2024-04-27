@@ -14,14 +14,12 @@ const Sponsors = () => {
     const containerRef = useRef(null);
 
     useEffect(() => {
-        const handleImagesLoaded = () => {
-            containerRef.current.style.animationPlayState = 'running';
-        };
-
-        containerRef.current.addEventListener('load', handleImagesLoaded, { capture: true });
-        return () => {
-            containerRef.current.removeEventListener('load', handleImagesLoaded, { capture: true });
-        };
+        if (containerRef.current) {
+            containerRef.current.style.animation = 'none';
+            setTimeout(() => {
+                containerRef.current.style.animation = '';
+            }, 10);
+        }
     }, []);
 
     return (
