@@ -1,0 +1,85 @@
+/* Root variables for easy theme management */
+:root {
+    --primary-bg-color: #fff;
+    --accent-color: #007bff;
+    --text-color: #333;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-effect: rgba(0, 0, 0, 0.2);
+}
+
+/* Basic reset for body margin and font settings */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-bg-color);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px var(--box-shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--accent-color);
+    background-color: var(--hover-effect);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+}
