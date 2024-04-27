@@ -9,17 +9,16 @@ const Header = () => {
             <nav>
                 <div className="logo">ARCENSCENE</div>
                 <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
-                    {isOpen ? '✖' : '☰'}
+                    {isOpen ? 'Fermer' : 'Menu'}
                 </button>
                 <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-                    <li><a href="#home">1</a></li>
-                    <li><a href="#about">2</a></li>
-                    <li><a href="#services">3</a></li>
-                    <li><a href="#portfolio">4</a></li>
-                    <li><a href="#team">5</a></li>
-                    <li><a href="#contact">6</a></li>
+                    <li><a href="#actualites">Actualités</a></li>
+                    <li><a href="#adhesion">Adhésion</a></li>
+                    <li><a href="#photos">Galerie Photos</a></li>
+                    <li><a href="#evenements">Événements à venir</a></li>
+                    <li><a href="#presentation">Présentation de l'association</a></li>
                 </ul>
-                <button className="btn-primary">BOUTON</button>
+                <button className="btn-primary">Devenir Membre</button>
             </nav>
         </header>
     );
