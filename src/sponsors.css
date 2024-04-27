@@ -9,7 +9,7 @@
 
 .sponsors-container {
     display: flex;
-    white-space: nowrap; /* Empêche le retour à la ligne des éléments */
+    white-space: nowrap; 
 }
 
 .sponsor-img {
@@ -26,9 +26,24 @@
 
 @keyframes scroll-left {
     from {
-        transform: translateX(100%);
+        transform: translate3d(100%, 0, 0);
     }
     to {
-        transform: translateX(-300%); 
+        transform: translate3d(-300%, 0, 0); 
+    }
+}
+
+@media (max-width: 768px) {
+    .sponsor-img {
+        animation-duration: 30s;
+    }
+
+    .sponsors {
+        padding: 10px; 
+    }
+
+    .sponsor-img {
+        margin: 0 10px; 
+        max-height: 60px; 
     }
 }
